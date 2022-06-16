@@ -1,0 +1,265 @@
+// SPACING SYSTEM (PX)
+$spacing12: 160px;
+$spacing11: 96px;
+$spacing10: 80px;
+$spacing9: 64px;
+$spacing8: 48px;
+$spacing7: 40px;
+$spacing6: 32px;
+$spacing5: 24px;
+$spacing4: 12px;
+$spacing3: 8px;
+$spacing2: 4px;
+$spacing1: 2px;
+
+// FONT SIZE SYSTEM (PX)
+$font9: 67.34px;
+$font8: 50.52px;
+$font7: 37.9px;
+$font6: 28.43px;
+$font5: 21.33px;
+$font4: 16px;
+$font3: 12px;
+$font2: 9px;
+$font1: 6.76px;
+
+$bg-color: #212529;
+$primary-color: #e9ecef;
+
+// <============================================================================>
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: $bg-color;
+    color: $primary-color;
+
+    letter-spacing: 0.5px;
+}
+
+a:link {
+    color: $primary-color;
+    text-decoration-color: #339af0;
+}
+a:visited,
+a:active {
+    color: $primary-color;
+    text-decoration-color: #339af0;
+}
+
+// <============================================================================>
+
+.spacing-box {
+    height: 200px;
+}
+
+.section {
+    margin: 0 auto;
+    padding: $spacing7 0;
+    width: 95%;
+
+    h1 {
+        font-size: $font7;
+        margin-bottom: $spacing6;
+    }
+
+    p {
+        font-size: $font5;
+        line-height: 1.7;
+    }
+}
+
+// <============================================================================>
+
+nav {
+    margin: 0 auto;
+    margin-top: $spacing6;
+    margin-bottom: $spacing9;
+    padding: $spacing4;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ced4da;
+    border-radius: 6px;
+
+    a:link {
+        font-size: $font5;
+        color: $bg-color;
+        font-weight: bold;
+
+        text-decoration: none;
+        text-decoration-color: $bg-color;
+    }
+    a:link:hover {
+        text-decoration: underline;
+    }
+    a:visited,
+    a:active {
+        color: $bg-color;
+        text-decoration-color: $bg-color;
+    }
+}
+
+.landing-section {
+    margin: 0 auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: $spacing10;
+
+    .profile-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 26px;
+    }
+
+    .info-text {
+        text-align: center;
+
+        h1 {
+            font-size: 110px;
+            font-weight: bold;
+        }
+
+        .info-text-list {
+            div {
+                margin-top: $spacing10;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            p {
+                font-size: $font6;
+            }
+        }
+    }
+}
+
+.competences-section {
+    a:link {
+        text-decoration-color: #f00800;
+    }
+}
+
+.contacts-section {
+    padding: $spacing7 0;
+
+    h1 {
+        font-size: $font6;
+        margin-bottom: $spacing8;
+        text-align: center;
+    }
+
+    .social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $spacing9;
+    }
+
+    .discord-icon {
+        cursor: pointer;
+    }
+}
+
+// <============================================================================>
+
+// RESPONSIVE
+
+@media screen and (max-width: 1702px) {
+    .info-text {
+        .info-text-list {
+            div {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    // body {
+    //     background-color: blue;
+    //     color: white;
+    // }
+
+    .landing-section {
+        height: auto;
+
+        .info-text {
+            text-align: center;
+
+            h1 {
+                font-size: 80px;
+            }
+
+            .info-text-list {
+                div {
+                    margin-top: $spacing7;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    // body {
+    //     background-color: olive;
+    //     color: white;
+    // }
+
+    .landing-section {
+        display: block;
+
+        img {
+            display: block;
+            margin: $spacing5 auto;
+            // width: 335px;
+            // height: 335px;
+        }
+
+        .info-text {
+            margin-top: $spacing10;
+
+            h1 {
+                font-size: 80px;
+            }
+
+            .info-text-list {
+                margin-top: $spacing10;
+
+                div {
+                    flex-direction: column;
+                    gap: $spacing5;
+                    margin-top: $spacing10;
+                }
+            }
+        }
+
+        .social {
+            margin-top: $spacing11;
+            gap: $spacing6;
+            margin-bottom: $spacing5;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    nav {
+        a:link {
+            font-size: $font4;
+        }
+    }
+}
